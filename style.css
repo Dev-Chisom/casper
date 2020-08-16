@@ -50,60 +50,23 @@ span{
     font-size: 14px;
     color: #444;
 }
-.icon{
-    color: #444;
-}
-
-.header{
+.main-header .header{
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     background-color: #f4f4f4;
-
 }
 .navbar{
-    display: none;
-}
-.main-header .header-1{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.header-2{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-} 
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);    
 }
-.nav h1{
-    color: #0a097a;
-    cursor: pointer;
-    
-}
-.nav .nav-links ul{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 1rem 1rem;
-}
-.nav .nav-links ul li{
+.navbar-nav .nav-item .nav-link{
     padding: 7px 7px;
     font-size: 1.2rem;
     color: #0a097a;
     cursor: pointer;
 }
-.nav .nav-links ul li:hover{
-    border-bottom: 3px solid #0a097a;
-}
 .content-items{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   
     margin: 1rem 2rem;
    
 }
@@ -111,14 +74,9 @@ span{
     font-size: 1.1rem;
     margin-left: 1rem;
 }
-.caraousel-caption{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: justify !important;
-}
 .accolades{
     margin-bottom: 3rem;
+    overflow: hidden;
 }
 .accolades-content{
     display: flex;
@@ -131,10 +89,6 @@ span{
 }
 .accolades-caption p{
     text-align: center;
-}
-.container{
-    margin-top: 7rem;
-    margin-bottom: 7rem;
 }
 .card-deck{
     display: grid;
@@ -518,23 +472,28 @@ span{
 
 
 
+@media (max-width: 1200px){
+    .products{
+        grid-gap: 1rem;
+        margin-top: 2rem;
+    }
+}
+
+
 @media (max-width: 768px){
-    .navbar{
-        display: block;
-    }
-    .header{
+    .main-header .header{
         display: none;
     }
-    .nav{
-        display: none;
+    .content-items{
+        margin: .5rem 1rem;
+       
+    }
+    .content-items span{
+        font-size: .7rem;
+        margin-left: 1rem;
     }
     .accolades-caption{
-        margin: 1rem 1rem;
-    }
-    span{
-        padding-left: 5px;
-        padding-right: 5px;
-        font-size: 10px;
+        margin: .7rem .6rem;
     }
     .flash-sale{
         top: 1.125rem;
@@ -580,18 +539,52 @@ span{
     .products{
         grid-template-columns: auto;
     }
+    .progress-bar{
+        display: none;
+    }
+    .content h3{
+        font-size: .8rem;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+        color: rgb(255, 255, 255);
+        transition: opacity 0.15s ease-out 0s;
+    }
+    .content-title{
+        font-style: normal;
+        font-weight: 200;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 7px;
+        line-height: 1;
+        letter-spacing: 0.01875rem;
+        color: rgb(255, 255, 255);
+    
+    }
+    .products{
+        grid-template-columns: auto;
+    }
     .products .socials{
         font-size: 10px;
     }
     .products-items{
-        font-size: 10px;
+        display: none;
+    }
+    .latest{
+        text-align: center;
+    }
+    .main-footer{
+        flex-wrap: wrap;
+        text-align: center;
     }
     .main-footer p{
         font-size: 10px;
     }
+    .main-footer ul{
+        
+        padding: 7px 7px;
+    }
     .main-footer ul li{
         font-size: 10px;
+        padding: 7px 7px;
+     
     }
-
-
 }
